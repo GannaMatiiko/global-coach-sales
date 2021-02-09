@@ -1,0 +1,44 @@
+//include third-party fonts
+
+@mixin font-face($font-name, $file-name, $font-weight, $font-style) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url("../fonts/"+ $file-name + ".woff2") format("woff2"),
+    url("../fonts/"+ $file-name + ".woff") format("woff");
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: swap;
+  }
+}
+
+
+// @font-face {
+//   font-family:'Good Times';
+//   src: url('Good Times.eot');
+//   src: url('Good Times.eot?#iefix') format('embedded-opentype'),
+//   url('../fonts/Good\ Times.woff2') format('woff2'),
+//   url('../fonts/Good\ Times.woff') format('woff'),
+//   url('../fonts/Good\ Times.ttf') format('truetype'),
+//   url('../fonts/Good Times.svg#Good Times') format('svg');
+//   font-weight: 400;
+//   font-style: normal;
+//   font-stretch: normal;
+//   unicode-range: U+0020-02DC;
+// }
+
+// @font-face {
+//   font-family:'Roboto Medium';
+//   src: url('Roboto Medium.eot');
+//   src: url('Roboto Medium.eot?#iefix') format('embedded-opentype'),
+//   url('../fonts/Roboto Medium.woff2') format('woff2'),
+//   url('../fonts/Roboto Medium.woff') format('woff'),
+//   url('../fonts/Roboto Medium.ttf') format('truetype'),
+//   url('../fonts/Roboto Medium.svg#Roboto Medium') format('svg');
+//   font-weight: 500;
+//   font-style: normal;
+//   font-stretch: normal;
+//   unicode-range: U+0020-2044;
+// }
+
+// @import url(https://allfont.ru/allfont.css?fonts=good-times);
+// @include font-face(GTAmerica, GTAmerica-CondensedMedium, 500, normal);

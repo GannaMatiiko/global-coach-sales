@@ -1,0 +1,188 @@
+html, body {
+  font-family: 'Good Times';
+  font-weight: 400;
+  color: $color-1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+.title {
+  font-size: rem-calc(32);
+  font-weight: 500;
+  line-height: 1.2em;
+  margin-bottom: 1.05em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.text-container {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.45em;
+  letter-spacing: 0;
+
+  p, ul, ol {
+    margin-bottom: 1em;
+  }
+}
+
+input {
+  background: $grey;
+  border: 1px solid $grey;
+  color: #231F20;
+  font-size: 14px;
+}
+
+.headline {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: normal;
+  color: $blue;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.subheadline {
+  font-family: Roboto Regular;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.prefooter {
+  background-color: $grey;
+  text-align: center;
+  padding: 40px 0 35px;
+  &__headline {
+    font-size: 24px;
+    font-weight: normal;
+    color: $blue;
+  }
+  &__subheadline {
+    font-size: 17px;
+    color: $blue;
+    font-weight: normal;
+    margin: 45px 0 35px;
+  }
+  &__text {
+    padding-top: 25px;
+    max-width: 830px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: Roboto Regular;
+  }
+  &__btn {
+    font-family: Roboto;
+    font-weight: 700;
+  }
+}
+
+.footer {
+  background-color: #231F20;
+  padding-bottom: 30px;
+  #logo-column {
+    grid-area: logo
+  }
+  #home {
+    grid-area: home
+  }
+  #about-news {
+    grid-area: about-news
+  }
+  #inventory {
+    grid-area: inventory;
+  }
+  #contact {
+    grid-area: contact
+  }
+  #operation {
+    grid-area: operation
+  }
+  #question {
+    grid-area: question
+  }
+  &-wrapper {
+    display: grid;
+    grid-template-columns: 17% 7% 7% 12% 12% 16% 16%;
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+    grid-template-areas: 
+      "logo home about-news inventory contact operation question";
+      @include laptop {
+        grid-template-columns: repeat(auto-fill, 15%);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+          "logo logo home about-news inventory inventory inventory"
+          "contact contact operation operation question question question"
+      }
+      @include mobile {
+        text-align: center;
+        grid-template-columns: repeat(auto-fill, 100%);
+        grid-template-rows: 1fr;
+        grid-gap: 0;
+        grid-template-areas: 
+          "logo"
+          "home"
+          "about-news"
+          "inventory"
+          "contact"
+          "operation"
+          "question"
+      }
+    color: $white;
+    font-size: 16px;
+    .col {
+      &:not(:first-child) {
+        margin-top: 70px;
+      }
+      &:first-child {
+        margin-top: 30px;
+      }
+      @include laptop {
+        width: auto !important;
+      }
+      a {
+        display: block;
+      }
+    }
+    &__logo {
+      width: 130px;
+      height: 75px;
+      margin-bottom: 25px;
+    }
+    &__head {
+      margin-bottom: 15px;
+    }
+    &__link {
+      margin-bottom: 15px;
+      font-size: 16px;
+      font-family: Roboto Medium;
+    }
+    &__text {
+      margin-bottom: 12px;
+      font-size: 14px;
+      line-height: 17px;
+      font-family: Roboto Medium;
+    }
+    &__info {
+      padding-top: 18px;
+      font-family: Roboto Medium;
+      font-size: 11px;
+    }
+    &__copyright {
+      color: $white;
+      font-size: 12px;
+      text-align: center;
+      font-family: Roboto;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.btn {
+    color: $white;
+    font-weight: bold;
+    border-radius: 16px;
+    padding: 10px 35px;
+    &-blue {
+        background-color: $blue;
+    }
+    &-green {
+        background-color: $green;
+    }
+}

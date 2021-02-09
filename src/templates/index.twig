@@ -1,0 +1,105 @@
+---
+title: Template
+description: Template
+pageName: homePage
+---
+
+{% extends 'layouts/_page-default.twig' %}
+{% block content %}
+  <main>
+    <div class="banner">
+      <img src="../img/home-banner.jpg" class="banner-img" alt="">
+      <span class="banner-text">Find the coach <br> for you</span>
+    </div>
+    <div class="container form-block">
+      <div class="form-wrapper">
+        <h4 class="ttu">Search pre-owned inventory</h4>
+        <form class="form">
+          <div class="form-row">
+            <div class="form-group col">
+              <input type="number" placeholder="Min Year">
+              <span style="margin: 5px 15px 0;">to</span>
+              <input type="number" placeholder="Max Year">
+            </div>
+            <div class="col">
+              <input type="text" placeholder="Make">
+            </div>
+            <div class="col">
+              <input type="text" placeholder="Model">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <input type="text" placeholder="Engine">
+            </div>
+            <div class="col">
+              <input type="text" placeholder="Transmission">
+            </div>
+            <div class="col">
+              <input type="text" placeholder="Lift">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <input type="text" placeholder="Refine with Keywords (separate each entry with ;)">
+            </div>
+          </div>
+          <div class="row form-bottom">
+            <a href="#" class="form-bottom__reset">Reset Fields</a>
+            <a href="#" class="btn btn-green form-bottom__search ttu">Search</a>
+          </div>
+        </form>
+      </div>
+
+    </div>
+    <div class="container info-block">
+      <div class="info-block__item">
+        <div class="info-block__header">Largest pre-owned inventory in North America</div>
+        <div class="info-block__body">
+          <p>Largest inventory of pre-owned coaches in North America</p>
+          <p>Motor coaches from most major brands including MCI, Prevost and Van Hool</p>
+          <p>Huge selection of road ready late model coaches with Short and Long Term Leases available</p>
+          <p>Most inventory is conveniently located in Nashville, Tennessee</p>
+        </div>
+        <div class="info-block__button text-center">
+          <a href="#" class="btn btn-blue ttu">Learn more</a>
+        </div>
+      </div>
+
+      <div class="info-block__item">
+        <div class="info-block__header">Financing</div>
+        <div class="info-block__body">
+          <p>Global Coach Finance offers financing for all makes and models of New and Used Motor Coaches</p>
+          <p>Short Term  and Long Term Operating Leases</p>
+          <p>Terms Loans of 3 to 7 years</p>
+          <p>TRAC Leases and Operating Leases</p>
+          <p>Competitive Rates and Flexible Structures</p>
+        </div>
+        <div class="info-block__button text-center">
+          <a href="#" class="btn btn-blue ttu">Contact us</a>
+        </div>
+      </div>
+    </div>
+    <div class="container brands-block">
+      <h3 class="headline">Featured brands</h3>
+      <h6 class="subheadline">
+        Providing makes and models from the top brands in the coach industry such as Van Hool, MCI and Prevost.
+      </h6>
+      <div class="brands-block__wrapper">
+        <div class="brands-block__item">
+          <img src="../img/brands/van-hool.svg" class="brands-block__img" alt="vanhool">
+          <a href="#" class="brands-block__link">View Van Hool</a>
+        </div>
+        <div class="brands-block__item">
+          <img src="../img/brands/mci.svg" class="brands-block__img" alt="mci">
+          <a href="#" class="brands-block__link">View MCI</a>
+        </div>
+        <div class="brands-block__item">
+          <img src="../img/brands/prevost.svg" class="brands-block__img" alt="prevost">
+          <a href="#" class="brands-block__link">View Prevost</a>
+        </div>
+      </div>
+    </div>
+    {% include "blocks/_prefooter.twig" %}
+  </main>
+{% endblock %}
