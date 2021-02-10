@@ -1,0 +1,126 @@
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 85px;
+    margin-bottom: 155px;
+    @include laptop {
+        margin-top: 40px;
+    }
+    &__text-block {
+        width: 50%;
+        padding-left: 120px;
+        padding-right: 120px;
+        @include laptop {
+            margin-bottom: 50px;
+            width: 60%;
+            padding-left: 0;
+            padding-right: 40px;
+        }
+        @include tablet {
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .about-head {
+            font-size: 24px;
+            color: $blue;
+            margin-top: 60px;
+            @include laptop {
+                margin-top: 30px;
+            }
+        }
+        .about-descr {
+            font-family: Roboto;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 65px;
+            @include laptop {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &__img-block {
+        width: 50%;
+        @include laptop {
+            width: 40%;
+        }
+        @include tablet {
+            width: 100%;
+        }
+        .about-img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+.process {
+    display: flex;
+    margin-bottom: 155px;
+    @include mobile {
+        flex-direction: column;
+    }
+    &-descr {
+        text-align: center;
+        width: 45%;
+        padding: 55px 10px;
+        color: $green;
+        border-right: 3px solid $green;
+        @include mobile {
+            width: 100%;
+            border: none;
+        }
+        &__icon {
+            width: 135px;
+            height: 105px;
+            margin-bottom: 55px;
+        }
+        &__text {
+            font-size: 32px;
+            line-height: 44px;
+            @include tablet {
+                font-size: 26px;
+            }
+        }
+        &__numbers {
+            margin-top: 10px;
+            font-size: 62px;
+            line-height: 80px;
+        }
+    }
+    &-steps {
+        width: 55%;
+        padding-left: 115px;
+        @include tablet {
+            padding-left: 40px;
+        }
+        @include mobile {
+            width: 100%;
+            padding-left: 0;
+        }
+        &__item {
+            display: flex;
+            margin-bottom: 25px;
+            .number {
+                color: $green;
+                font-size: 62px;
+                letter-spacing: 2rem;
+                margin-right: 80px;
+                width: 45px;
+                @include tablet {
+                    margin-right: 40px;
+                }
+            }
+            .descr {
+                font-family: Roboto;
+                &-head {
+                    color: $green;
+                    font-size: 28px;
+                    margin-bottom: 20px;
+                }
+                &-text {
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}

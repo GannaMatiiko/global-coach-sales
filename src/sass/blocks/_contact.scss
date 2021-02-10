@@ -1,0 +1,44 @@
+.contact-block {
+    &__headline {
+        color: $blue;
+        font-size: 28px;
+        font-weight: 500;
+    }
+    &__descr {
+        font-family: Roboto;
+        max-width: 900px;
+    }
+    &__form {
+        font-family: Roboto;
+        .form-row {
+            display: flex;
+            @include mobile {
+                flex-direction: column;
+            }
+            .col {
+                margin-bottom: 20px;
+               width: 100%;
+               &.name {
+                    margin-right: 20px;
+                }
+               input {
+                   width: 100%;
+                   background-color: $white;
+                   font-weight: 500;
+                   height: 45px;
+                   border: 1px solid #808184;
+                   padding: 15px 30px;
+               }
+               textarea {
+                   width: 100%;
+                   font-size: 14px;
+                   font-weight: 500;
+                   border: 1px solid #808184;
+                   padding: 15px 30px;
+                   resize: none;
+               }
+            }
+        }
+
+    }
+}

@@ -1,8 +1,10 @@
 .btn {
     color: $white;
+    font-family: Roboto;
     font-weight: bold;
     border-radius: 16px;
     padding: 10px 35px;
+    text-transform: uppercase;
     &-blue {
         background-color: $blue;
     }
