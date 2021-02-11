@@ -1,0 +1,206 @@
+.search {
+    &-headline {
+        font-size: 28px;
+        color: $white;
+        font-weight: 700;
+        text-transform: uppercase;
+        &_blue {
+            color: $blue;
+        }
+    }
+    &-form {
+        background-color: $blue;
+        font-family: Roboto;
+        padding: 40px 250px 40px;
+        text-align: center;
+        margin-top: 40px;
+        @include laptop {
+            padding: 40px 100px 40px;
+        }
+        &__inputs {
+            margin-top: 50px;
+            select {
+                &:nth-child(1),
+                &:nth-child(3),
+                &:nth-child(5) {
+                    margin-right: 20px;
+                }
+            }
+        }
+        &__button {
+            margin-top: 60px;
+        }
+    }
+    &-results {
+        margin-top: 50px;
+        font-family: Roboto;
+        &__subheadline {
+            margin: 15px 0 20px;
+            font-weight: 500;
+        }
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid #b3b5b8;
+            padding: 25px 20px;
+            margin-bottom: 10px;
+            @include laptop {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        &_left {
+            display: flex;
+            @include mobile {
+                flex-direction: column;
+            }
+        }
+        &_right {
+            text-align: right;
+            @include laptop {
+                text-align: center;
+            }
+        }
+    }
+    &-img {
+        width: 275px;
+        height: 230px;
+        object-fit: cover;
+    }
+    &-descr {
+        padding-left: 30px;
+        @include mobile {
+            padding-left: 0;
+        }
+        &__name {
+            margin-bottom: 25px;
+            color: $blue;
+            text-transform: uppercase;
+            font-size: 32px;
+            font-weight: 700;
+        }
+        &__info {
+            font-size: 20px;
+            margin-bottom: 8px;
+            word-break: break-word;
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+    &-action {
+        margin-top: 70px;
+        @include laptop {
+            margin-top: 30px;
+        }
+        &__price {
+            font-size: 39px;
+            color: $blue;
+            font-weight: 700;
+        } 
+        &__tax {
+            margin-top: 10px;
+            font-size: 15px;
+            font-style: italic;
+            color: #6d6e71;
+        }
+    }
+    &-footer {
+        display: flex;
+        justify-content: center;
+        border-top: 1px solid #929497;
+        margin-top: 35px;
+        &__text {
+            font-family: Roboto;
+            text-align: center;
+            margin: 70px 0 85px;
+            max-width: 820px;
+            &__parag {
+                margin-top: 25px;
+            }
+        }
+    }
+}
+
+/* Pagination links */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+    font-size: 12px;
+    a {
+        color: #464749;
+        float: left;
+        padding: 7px 11px;
+        text-decoration: none;
+        transition: background-color .3s;
+        &.arrow {
+            color: $blue;
+            font-size: 12px;
+        }
+        &.active {
+            background-color: $blue;
+            color: white;
+        }
+        &:hover:not(.active) {
+            background-color: #ddd;
+        }
+    }
+    .sep {
+        padding: 7px 11px;
+    }
+}
+
+.refine-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto;
+    margin-top: 105px;
+    @include tablet {
+        flex-direction: column;
+        margin-top: 70px;
+    }
+    &__headline {
+        margin-right: 40px;
+        margin-bottom: 5px;
+        @include tablet {
+            margin-bottom: 50px;
+            margin-right: 0;
+        }
+    }
+    &__select {
+        min-width: 420px;
+        position: relative;
+        @include laptop {
+            min-width: 380px;
+        }
+        @media (max-width: 500px) {
+            min-width: 300px;
+        }
+        &__pre {
+            text-transform: uppercase;
+            position: absolute;
+            bottom: 70px;
+            left: 20px;
+            @include tablet {
+                left: 0;
+            }
+        }
+    }
+    &__button {
+        margin-left: 25px;
+        margin-bottom: 12px;
+        @include tablet {
+            margin-left: 0;
+            margin-top: 25px;
+        }
+        .btn {
+            padding: 15px 50px;
+        }
+    }
+}
+  
+
+  

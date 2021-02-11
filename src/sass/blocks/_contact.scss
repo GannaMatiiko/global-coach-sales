@@ -1,15 +1,18 @@
 .contact-block {
     &__headline {
+        margin: 50px 0 45px;
         color: $blue;
         font-size: 28px;
         font-weight: 500;
     }
     &__descr {
+        margin-bottom: 45px;
         font-family: Roboto;
         max-width: 900px;
     }
     &__form {
         font-family: Roboto;
+        margin-bottom: 90px;
         .form-row {
             display: flex;
             @include mobile {
@@ -30,7 +33,9 @@
                    padding: 15px 30px;
                }
                textarea {
+                   margin-bottom: 30px;
                    width: 100%;
+                   line-height: 22px;
                    font-size: 14px;
                    font-weight: 500;
                    border: 1px solid #808184;
@@ -39,6 +44,46 @@
                }
             }
         }
+    }
+}
 
+.address-block {
+    display: flex;
+    @include tablet {
+        flex-direction: column-reverse;
+    }
+    &__item {
+        width: 50%;
+        @include tablet {
+            width: 100%;
+        }
+        &__map {
+            margin-right: 25px;
+            @include tablet {
+                margin-right: 0;
+            }
+        }
+        &__address {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: $blue;
+            color: $white;
+            text-align: center;
+            height: 600px;
+            padding: 0 20px;
+            @include tablet {
+                height: 300px;
+                margin-bottom: 30px;
+            }
+            .address-headline {
+                font-size: 28px;
+                padding-bottom: 10px;
+            }
+            .address-text {
+                font-family: Roboto;
+                margin-top: 30px;
+            }
+        }
     }
 }

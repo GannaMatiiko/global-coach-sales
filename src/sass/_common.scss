@@ -54,9 +54,40 @@ img, video {
       line-height: 56px;
       z-index: 10;
       &_small {
+        font-size: 44px;
         left: 75px;
         top: 220px;
       }
+      &__block {
+        position: absolute;
+        top: 175px;
+        left: 70px;
+        color: $white;
+        @include tablet {
+          top: 100px;
+          left: 30px;
+        }
+        &__pre {
+          font-family: Roboto;
+          font-size: 20px;
+          font-weight: 700;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+        }
+        &__post {
+          max-width: 530px;
+          font-family: Roboto;
+          line-height: 22px;
+          margin-top: 25px;
+        }
+      }
+  }
+}
+
+.form-row {
+  display: flex;
+  @include mobile {
+    flex-direction: column;
   }
 }
 
@@ -67,6 +98,27 @@ input {
   font-size: 14px;
 }
 
+select {
+  font-size: 14px;
+  text-transform: uppercase;
+  height: 50px;
+  width: 100%;
+  background: $white;
+  border: 1px solid #323133;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='38' viewBox='0 0 24 24' width='38' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 99%;
+  background-position-y: 8px;
+  padding: 18px;
+  padding-right: 2rem;
+  margin-bottom: 10px;
+}
+option[value=""][disabled] {
+  display: none;
+}
+
 .headline {
   font-family: Good Times;
   font-size: 22px;
@@ -75,9 +127,10 @@ input {
   color: $blue;
   text-transform: uppercase;
   text-align: center;
-  &-big {
+  &_big {
     font-size: 24px;
     line-height: 30px;
+    line-height: 28px;
   }
 }
 
@@ -99,6 +152,10 @@ input {
   &-contact {
     margin: 80px 0 70px;
     padding: 75px 300px;
+    background-color: #ced0d1;
+    @include tablet {
+      padding: 75px 30px;
+    }
     p {
       margin: 50px 0 25px;
     }
