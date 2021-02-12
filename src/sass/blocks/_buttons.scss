@@ -7,6 +7,11 @@
     text-transform: uppercase;
     &-blue {
         background-color: $blue;
+        &_outline {
+            color: $blue;
+            background-color: $white;
+            border: 1px solid $blue;
+        }
     }
     &-green {
         background-color: $green;

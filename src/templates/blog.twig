@@ -1,0 +1,80 @@
+{% extends 'layouts/_page-default.twig' %}
+{% block content %}
+  <main>
+    <div class="banner_textual">
+      <div class="container-big">
+        <h2>News & Blog</h2>
+      </div>
+    </div>
+
+    <div class="container-big">
+        <div class="blog">
+            <div class="blog__header">
+                <div class="headline headline_big">Stay up to date</div>
+                <div class="subheadline blog__subheadline">We’re happy to provide you with the latest news and trends in the luxury coach market. Take a look around, read our blogs, and learn more.</div>
+            </div>
+
+            <div class="blog__filter">
+                <form class="common-form">
+                    <h5 class="blog__filter-headline common-form__headline">Filter posts:</h5>
+                    <div class="common-form__select">
+                        <select>
+                            <option value="">Sort by - most recent</option>
+                            <option value="">Sort by - alphabetical</option>
+                            <option value="">Sort by - rating</option>
+                        </select>
+                    </div>
+                    <div class="text-center common-form__button">
+                        <button type="submit" class="btn btn-blue ttu">Apply</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="blog__items">
+                <div class="blog__items-item">
+                    <img class="blog-img" src="../img/blog/blog-item.jpg" alt="" width="620" height="380">
+                    <div class="blog-headline">How to keep your coach in top shape How to keep your coach in top shape How to keep your coach in top shape How to keep your coach in top shape How to keep your coach in top shape</div>
+                    <div class="blog-date">January 28, 2021</div>
+                </div>
+                <div class="blog__items-item">
+                    <img class="blog-img" src="../img/blog/blog-item.jpg" alt="" width="620" height="380">
+                    <div class="blog-headline">How to keep your coach in top shape</div>
+                    <div class="blog-date">January 28, 2021</div>
+                </div>
+                <div class="blog__items-item">
+                    <img class="blog-img" src="../img/blog/blog-item.jpg" alt="" width="620" height="380">
+                    <div class="blog-headline">How to keep your coach in top shape</div>
+                    <div class="blog-date">January 28, 2021</div>
+                </div>
+                <div class="blog__items-item">
+                    <img class="blog-img" src="../img/blog/blog-item.jpg" alt="" width="620" height="380">
+                    <div class="blog-headline">How to keep your coach in top shape</div>
+                    <div class="blog-date">January 28, 2021</div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <a href="#" class="arrow">&xlarr;</a>
+                <a href="#">1</a>
+                <a class="active" href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <div class="sep">...</div>
+                <a href="#">6</a>
+                <a href="#" class="arrow">&xrarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="prefooter prefooter-about">
+        <div class="container">
+            <h3 class="prefooter__headline">View full inventory</h3>
+            <p class="prefooter__text">Our talented sales team is ready to help you find exactly what you are looking for from our diverse and well-rounded inventory selection. We always keep the focus on the customer and look to provide you with a seamless experience so you can get your coach on the road.</p>
+            <div class="prefooter__btn text-center">
+                <a href="#" class="btn btn-blue ttu">View inventory</a>
+            </div>
+        </div>
+    </div>
+  </main>
+{% endblock %}

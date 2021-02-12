@@ -2,5 +2,58 @@
     &__back {
         color: $blue;
         font-size: 16px;
+        margin-bottom: 45px;
+        margin-top: 65px;
+    }
+    &__item {
+        display: flex;
+        font-family: Roboto;
+    }
+    &__slider {
+        width: 50%;
+    }
+    &__descr {
+        width: 50%;
+        .name,
+        .price {
+            font-size: 30px;
+            color: $blue;
+            font-weight: 700;
+            margin-top: 15px;
+        }
+        .features {
+            margin-top: 25px;
+            .feature {
+                font-size: 21px;
+                line-height: 29px;
+                span {
+                    font-weight: 700;
+                }
+            }
+        }
+        .action-buttons {
+            display: flex;
+            margin-top: 50px;
+            margin-bottom: 45px;
+            &_left {
+                margin-right: 25px;
+            }
+            &_right {
+
+            }
+        }
+    }
+    &__additional {
+        font-family: Roboto;
+        margin: 30px 0 70px;
+        .head {
+            font-size: 23px;
+            font-weight: 700;
+            color: $blue;
+        }
+        .text {
+            font-size: 20px;
+            line-height: 29px;
+        }
     }
 }

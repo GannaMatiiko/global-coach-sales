@@ -17,12 +17,13 @@
         @include laptop {
             padding: 40px 100px 40px;
         }
+        &__block {
+            margin-top: 105px;
+        }
         &__inputs {
             margin-top: 50px;
             select {
-                &:nth-child(1),
-                &:nth-child(3),
-                &:nth-child(5) {
+                &:nth-child(odd) {
                     margin-right: 20px;
                 }
             }
@@ -122,85 +123,6 @@
     }
 }
 
-/* Pagination links */
-.pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 45px;
-    font-size: 12px;
-    a {
-        color: #464749;
-        float: left;
-        padding: 7px 11px;
-        text-decoration: none;
-        transition: background-color .3s;
-        &.arrow {
-            color: $blue;
-            font-size: 12px;
-        }
-        &.active {
-            background-color: $blue;
-            color: white;
-        }
-        &:hover:not(.active) {
-            background-color: #ddd;
-        }
-    }
-    .sep {
-        padding: 7px 11px;
-    }
-}
-
-.refine-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Roboto;
-    margin-top: 105px;
-    @include tablet {
-        flex-direction: column;
-        margin-top: 70px;
-    }
-    &__headline {
-        margin-right: 40px;
-        margin-bottom: 5px;
-        @include tablet {
-            margin-bottom: 50px;
-            margin-right: 0;
-        }
-    }
-    &__select {
-        min-width: 420px;
-        position: relative;
-        @include laptop {
-            min-width: 380px;
-        }
-        @media (max-width: 500px) {
-            min-width: 300px;
-        }
-        &__pre {
-            text-transform: uppercase;
-            position: absolute;
-            bottom: 70px;
-            left: 20px;
-            @include tablet {
-                left: 0;
-            }
-        }
-    }
-    &__button {
-        margin-left: 25px;
-        margin-bottom: 12px;
-        @include tablet {
-            margin-left: 0;
-            margin-top: 25px;
-        }
-        .btn {
-            padding: 15px 50px;
-        }
-    }
-}
   
 
   

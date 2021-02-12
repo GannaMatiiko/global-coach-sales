@@ -1,0 +1,144 @@
+.blog-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    @include mobile {
+        flex-direction: column;
+    }
+    &__title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #f1f2f2;
+        margin-right: 25px;
+        width: 40%;
+        padding-left: 60px;
+        padding-right: 30px;
+        @include tablet {
+            width: 50%;
+        }
+        @include mobile {
+            width: 100%;
+            padding: 50px 20px;
+        }
+        .date {
+            font-family: Roboto;
+            font-size: 23px;
+            margin-bottom: 20px;
+            @include mobile {
+                font-size: 18px;
+            }
+        }
+        .name {
+            font-size: 36px;
+            color: $blue;
+            @include laptop {
+                font-size: 30px;
+            }
+            @include mobile {
+                font-size: 20px;
+            }
+        }
+    }
+    &__img {
+        width: 60%;
+        @include tablet {
+            width: 50%;
+        }
+        @include mobile {
+            width: 100%;
+            padding: 30px 30px 0;
+        }
+        .img {
+            width: 100%;
+        }
+    }
+    &__body {
+        font-family: Roboto;
+        display: flex;
+        @include mobile {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        .name {
+            border-bottom: 1px solid black;
+            font-size: 24px;
+            font-weight: 700;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+    }
+    &__aside {
+        width: 30%;
+        padding-right: 40px;
+        margin-top: 75px;
+        @include mobile {
+            width: 100%;
+            padding-right: 0;
+        }
+        .share-block {
+            margin-bottom: 180px;
+            @include mobile {
+                margin-bottom: 50px;
+            }
+            .icons {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @include mobile {
+                    justify-content: space-around;
+                }
+            }
+        }
+        .related-block {
+            &__item {
+                margin-bottom: 40px;
+                &-img {
+                    width: 100%;
+                }
+                &-title {
+                    font-size: 23px;
+                    font-weight: 500;
+                    line-height: 27px;
+                    margin-top: 15px;
+                }
+                &-date {
+                    margin-top: 16px;
+                    font-size: 23px;
+                }
+            }
+        }
+
+    }
+    &__content {
+        width: 70%;
+        padding-left: 90px;
+        margin-top: 100px;
+        @include tablet {
+            padding-left: 30px;
+        }
+        @include mobile {
+            width: 100%;
+            margin-top: 50px;
+            padding-left: 0;
+        }
+        &-parag {
+            font-size: 21px;
+            line-height: 36px;
+            margin-bottom: 45px;
+        }
+        &-arrows {
+            display: flex;
+            justify-content: space-between;
+            color: $blue;
+            padding-top: 100px;
+            padding-bottom: 110px;
+            @include mobile {
+                padding: 40px 0;
+            }
+            .arrow {
+                font-size: 34px;
+            }
+        }
+    }
+}
