@@ -17,26 +17,26 @@ pageName: homePage
         <form class="form">
           <div class="form-row">
             <div class="form-group col">
-              <input type="number" placeholder="Min Year">
+              <input type="number" name="minyear" placeholder="Min Year">
               <span style="margin: 5px 15px 0;">to</span>
-              <input type="number" placeholder="Max Year">
+              <input type="number" name="maxyear" placeholder="Max Year">
             </div>
             <div class="col">
-              <input type="text" placeholder="Make">
+              <input type="text" name="make" placeholder="Make">
             </div>
             <div class="col">
-              <input type="text" placeholder="Model">
+              <input type="text" name="model" placeholder="Model">
             </div>
           </div>
           <div class="form-row">
             <div class="col">
-              <input type="text" placeholder="Engine">
+              <input type="text" name="engine" placeholder="Engine">
             </div>
             <div class="col">
-              <input type="text" placeholder="Transmission">
+              <input type="text" name="transmission" placeholder="Transmission">
             </div>
             <div class="col">
-              <input type="text" placeholder="Lift">
+              <input type="text" name="lift" placeholder="Lift">
             </div>
           </div>
           <div class="form-row">
@@ -45,8 +45,8 @@ pageName: homePage
             </div>
           </div>
           <div class="row form-bottom">
-            <a href="#" class="form-bottom__reset">Reset Fields</a>
-            <a href="#" class="btn btn-green form-bottom__search ttu">Search</a>
+            <input class="form-bottom__reset" type="reset" value="Reset Fields">
+            <button type="submit" class="btn btn-green form-bottom__search ttu">Search</button>
           </div>
         </form>
       </div>
