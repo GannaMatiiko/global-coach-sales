@@ -1,24 +1,144 @@
-// .header {
-//     background: #EEEFEF;
-//     padding: 8px 0;
-//     &-wrapper {
-//         display: flex;
-//         justify-content: space-between;
-//         align-items: center;
-//         font-size: 14px;
-//     }
-//     .logo {
-//         height: 60px;
-//         width: 105px;
-//     }
-//     .nav-header {
-//         display: flex;
-//         color: $blue;
-//         &__item {
-//             margin: 0 7px;
-//         }
-//     }
-//     .header-btn {
-//         font-family: Roboto;
-//     }
-// }
+/* ------------------ navbar ----------------- */
+    .header {
+        background: #EEEFEF;
+    } 
+    .flex-row{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    .logo {
+        height: 60px;
+        width: 105px;
+        @include mobile {
+            width: 80px;
+        }
+    } 
+    .nav {
+        position: relative;
+        justify-content: space-between;
+        height: fit-content;
+        height: 0rem;
+        min-height: 100px;
+        overflow-y: hidden;
+        transition: height 1s cubic-bezier(0.26, -0.01, 0,  1.01);
+        &-brand {
+            a {
+                display: block;
+                padding: 1rem 0;
+                font-size: 1.6rem;
+            }
+        }
+        &-items {
+            list-style-type: none;
+            margin: 0;
+            &__link {
+                padding-right: 45px;
+                font-size: 14px;
+                color: $blue;
+                @include tablet {
+                padding: 1.3rem 1rem;
+                }
+                a {
+                    &:hover {
+                        color: turquoise;
+                    }
+                }
+                
+            }
+        }
+        &-actions {
+            display: flex;
+            align-items: center;
+            @include tablet {
+              flex-direction: column;
+            }
+            &__btn {
+                @include tablet {
+                    text-align: center;
+                    margin-top: 10px;
+                }
+            }
+        }
+        &-cart {
+            @include tablet {
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+  }
+
+  nav {
+    .toggle {
+        &-collapse {
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            width: 100%;
+            cursor: pointer;
+            display: none;
+        }
+        &-icons {
+            display: flex;
+            justify-content: flex-end;
+            padding: 2.5rem 0rem;
+            i {
+                font-size: 1.4rem;
+            }
+        }
+    }
+  }
+
+  .collapse{
+    height: 30rem;
+  }
+
+  /* creating own toggle icons  */
+  .icon, .icon::before, .icon::after{
+    position: relative;
+    width: 10px;
+    border: 2px solid $blue;
+    border-radius: 3rem;
+    display: inline-block;
+    transition: all .8s ease;
+    transition-property: width, left;
+  }
+  
+  .icon::before{
+    content: " ";
+    position: absolute;
+    top: 5px;
+    width: 20px;
+    left: -12px;
+  }
+  
+  .icon::after{
+    content: " ";
+    position: absolute;
+    top: 12px;
+    left: -2px;
+  }
+  
+  .toggle-click, .toggle-click::before, .toggle-click::after{
+    width: 20px;
+  }
+  
+  .toggle-click::before{
+    left: -2px;
+  }
+  
+  
+  
+  @media only screen and (max-width: 1023px){
+    nav {
+        flex-direction: column !important;
+        display: block !important;
+        .nav-items {
+            flex-direction: column;
+        }
+        .toggle-collapse {
+            display: initial;
+        }
+    }
+  }

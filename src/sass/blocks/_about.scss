@@ -6,6 +6,9 @@
     @include laptop {
         margin-top: 40px;
     }
+    @include mobile {
+        margin-bottom: 40px;
+    }
     &__text-block {
         width: 50%;
         padding-left: 120px;

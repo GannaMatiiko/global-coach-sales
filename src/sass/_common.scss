@@ -13,6 +13,10 @@ img, video {
   height: auto;
 }
 
+main {
+  margin-bottom: -4px;
+}
+
 .title {
   font-size: rem-calc(32);
   font-weight: 500;
@@ -40,6 +44,9 @@ img, video {
       width: 100%;
       position: relative;
       object-fit: cover;
+      @include mobile {
+        height: 370px !important;
+      }
       &_small {
         height: 415px;
         filter: brightness(0.8);
@@ -53,10 +60,28 @@ img, video {
       font-size: 48px;
       line-height: 56px;
       z-index: 10;
+      @include tablet {
+        left: 60px;
+        top: 100px;
+        font-size: 34px;
+        line-height: 38px;
+      }
+      @include mobile {
+        left: 20px;
+        top: 60px;
+        font-size: 28px;
+        line-height: 34px;
+      }
       &_small {
         font-size: 44px;
         left: 75px;
         top: 220px;
+        @include mobile {
+          left: 20px;
+          top: 60px;
+          font-size: 28px;
+          line-height: 34px;
+        }
       }
       &__block {
         position: absolute;
@@ -66,6 +91,10 @@ img, video {
         @include tablet {
           top: 100px;
           left: 30px;
+        }
+        @include mobile {
+          top: 50px;
+          left: 10px;
         }
         &__pre {
           font-family: Roboto;
@@ -89,6 +118,11 @@ img, video {
     color: $white;
     font-size: 36px;
     height: 205px;
+    @include mobile {
+      height: 125px;
+      font-size: 26px;
+      line-height: 30px;
+    }
   }
 }
 
@@ -135,10 +169,16 @@ option[value=""][disabled] {
   color: $blue;
   text-transform: uppercase;
   text-align: center;
+  @include mobile {
+    font-size: 18px;
+  }
   &_big {
     font-size: 24px;
-    line-height: 30px;
     line-height: 28px;
+    @include mobile {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 }
 
@@ -148,6 +188,7 @@ option[value=""][disabled] {
   font-size: 18px;
   line-height: 22px;
   text-align: center;
+  padding: 0 20px;
 }
 
 .common-form {
@@ -233,7 +274,7 @@ option[value=""][disabled] {
 .prefooter {
   background-color: $grey;
   text-align: center;
-  padding: 40px 0 35px;
+  padding: 40px 0 50px;
   &-about {
     padding-bottom: 80px;
   }
@@ -252,6 +293,9 @@ option[value=""][disabled] {
     font-size: 24px;
     font-weight: normal;
     color: $blue;
+    @include mobile {
+      font-size: 18px;
+    }
   }
   &__subheadline {
     font-size: 17px;
@@ -388,276 +432,32 @@ option[value=""][disabled] {
   }
 }
 
-// /* header */
-
-// .header {
-//   background: #EEEFEF;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   z-index: 20;
-// }
-// .header-wrapper {
-//   display: flex;
-//   align-items: center;
-// }
-
-// .header ul {
-//   margin: 0;
-//   padding: 0;
-//   list-style: none;
-//   overflow: hidden;
-// }
-
-// .header li a {
-//   display: block;
-//   padding: 20px 20px;
-//   border-right: 1px solid #f4f4f4;
-//   text-decoration: none;
-// }
-
-// .header li a:hover,
-// .header .menu-btn:hover {
-//   background-color: #f4f4f4;
-// }
-
-// .header .logo {
-//   height: 60px;
-//   width: 105px;
-// }
-
-// /* menu */
-
-// .header .menu {
-//   clear: both;
-//   max-height: 0;
-//   transition: max-height .2s ease-out;
-// }
-
-// /* menu icon */
-
-// .header .menu-icon {
-//   cursor: pointer;
-//   display: inline-block;
-//   float: right;
-//   padding: 28px 20px;
-//   position: relative;
-//   user-select: none;
-// }
-
-// .header .menu-icon .navicon {
-//   background: #333;
-//   display: block;
-//   height: 2px;
-//   position: relative;
-//   transition: background .2s ease-out;
-//   width: 18px;
-// }
-
-// .header .menu-icon .navicon:before,
-// .header .menu-icon .navicon:after {
-//   background: #333;
-//   content: '';
-//   display: block;
-//   height: 100%;
-//   position: absolute;
-//   transition: all .2s ease-out;
-//   width: 100%;
-// }
-
-// .header .menu-icon .navicon:before {
-//   top: 5px;
-// }
-
-// .header .menu-icon .navicon:after {
-//   top: -5px;
-// }
-
-// /* menu btn */
-
-// .header .menu-btn {
-//   display: none;
-// }
-
-// .header .menu-btn:checked ~ .menu {
-//   max-height: 240px;
-// }
-
-// .header .menu-btn:checked ~ .menu-icon .navicon {
-//   background: transparent;
-// }
-
-// .header .menu-btn:checked ~ .menu-icon .navicon:before {
-//   transform: rotate(-45deg);
-// }
-
-// .header .menu-btn:checked ~ .menu-icon .navicon:after {
-//   transform: rotate(45deg);
-// }
-
-// .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-// .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-//   top: 0;
-// }
-
-// /* 48em = 768px */
-
-// @media (min-width: 48em) {
-//   .header li {
-//     float: left;
-//   }
-//   .header li a {
-//     padding: 20px 30px;
-//   }
-//   .header .menu {
-//     clear: none;
-//     float: right;
-//     max-height: none;
-//   }
-//   .header .menu-icon {
-//     display: none;
-//   }
-// }
-
-/* ------------------ navbar ----------------- */
-
-.flex-row{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-
-.logo {
-  height: 60px;
-  width: 105px;
-}
-
-
-
-.text-black{
-  color: black;
-}
-
-
-
-nav{
-  padding: 0 2rem;
-  background: var(--sky);
-  position: relative;
-  justify-content: space-between;
-  height: fit-content;
-  height: 0rem;
-  min-height: 100px;
-  overflow-y: hidden;
-  transition: height 1s cubic-bezier(0.26, -0.01, 0,  1.01);
-}
-
-nav .nav-brand a{
-  display: block;
-  padding: 1rem 0;
-  font-family: var(--lexend);
-  font-size: 1.6rem;
-}
-
-nav .nav-items{
-  list-style-type: none;
-  margin: 0;
-}
-
-nav .nav-items .nav-link{
-  padding: 1.3rem 1rem;
-  font-family: var(--livvic);
-  font-size: 1.1rem;
-}
-
-nav .nav-items .nav-link:hover{
-  background: var(--bg-color);
-}
-
-nav .nav-items .nav-link:hover a{
-  color: white;
-}
-
-nav .social {
-  padding: 1.4rem 0;
-}
-
-nav .social i{
-  padding: 0 .2rem;
-}
-
-nav .toggle-collapse{
-  position: absolute;
-  top: 0%;
-  right: 0%;
-  width: 100%;
-  cursor: pointer;
-  display: none;
-}
-
-nav .toggle-collapse .toggle-icons{
-  display: flex;
-  justify-content: flex-end;
-  padding: 2.5rem 2rem;
-}
-
-nav .toggle-collapse .toggle-icons i{
-  font-size: 1.4rem;
-}
-
-.collapse{
-  height: 30rem;
-}
-
-/* creating own toggle icons  */
-.icon, .icon::before, .icon::after{
-  position: relative;
-  width: 10px;
-  border: 2px solid black;
-  border-radius: 3rem;
-  display: inline-block;
-  transition: all .8s ease;
-  transition-property: width, left;
-}
-
-.icon::before{
-  content: " ";
-  position: absolute;
-  top: 5px;
-  width: 20px;
-  left: -12px;
-}
-
-.icon::after{
-  content: " ";
-  position: absolute;
-  top: 12px;
-  left: -2px;
-}
-
-.toggle-click, .toggle-click::before, .toggle-click::after{
-  width: 20px;
-}
-
-.toggle-click::before{
-  left: -2px;
-}
-
-
-
-@media only screen and (max-width: 1023px){
-  nav .nav-items{
-      flex-direction: column;
+.content-text {
+  font-family: Roboto;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 60px 0 100px 0;
+  @include mobile {
+    font-size: 16px;
+    line-height: 26px;
   }
-  nav{
-      flex-direction: column !important;
-      display: block !important;
+  &_small {
+    margin-bottom: 35px;
+    @include mobile {
+      margin-bottom: 15px;
+    }
   }
-
-  nav .toggle-collapse{
-      display: initial;
+  &_medium {
+    margin-bottom: 65px;
+    @include mobile {
+      margin-bottom: 35px;
+    }
   }
-
+  &_big {
+    margin-bottom: 95px;
+    @include mobile {
+      margin-bottom: 65px;
+    }
+  }
 }
+

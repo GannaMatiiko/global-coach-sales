@@ -1,105 +1,40 @@
 <header class="header" id="header">
-  <div class="container-big header-wrapper">
-    {# <img src="../../img/logo.svg" class="logo">
-    <input class="menu-btn" type="checkbox" id="menu-btn" />
-    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-    <nav>
-      <ul class="nav-header menu">
-        <li class="nav-header__item">
-          <a href="#">About</a>
-        </li>
-        <li class="nav-header__item">
-          <a href="#">Inventory</a>
-        </li>
-        <li class="nav-header__item">
-          <a href="#">Contact</a>
-        </li>
-        <li class="nav-header__item">
-          <a href="#">News</a>
-        </li>
-      </ul>
-    </nav>
-    <div>Cart (0)</div>
-    <div>
-      <a href="#" class="btn btn-blue ttu header-btn">Call now</a>
-    </div> #}
-
-
-    {# <div class="header"> #}
-      {# <img src="../../img/logo.svg" class="logo">
-      <input class="menu-btn" type="checkbox" id="menu-btn" />
-      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-      <nav class="menu">
-      <ul class="nav-header menu">
-        <li class="nav-header__item">
-          <a href="#">About</a>
-        </li>
-        <li class="nav-header__item">
-          <a href="#">Inventory</a>
-        </li>
-        <li class="nav-header__item">
-          <a href="#">Contact</a>
-        </li>
-        <li class="nav-header__item">
-          <a href="#">News</a>
-        </li>
-      </ul>
-    </nav>
-    <div>Cart (0)</div>
-      <div>
-        <a href="#" class="btn btn-blue ttu header-btn">Call now</a>
-      </div>  #}
-
-    {# </div> #}
-
-
+  <div class="container-big ">
       <nav class="nav flex-row">
         <div class="nav-menu">
             <div class="nav-brand">
-                <a href="#" >
+                <a href="/index.html" >
                   <img src="../../img/logo.svg" class="logo">
                 </a>
             </div>
         </div>
         <div class="toggle-collapse">
-            <div class="toggle-icons text-black">
-                <!--<span><i class="fas fa-bars"></i></span>-->
+            <div class="toggle-icons">
                 <span class="icon"></span>
             </div>
         </div>
         <div>
             <ul class="nav-items flex-row">
-                <li class="nav-link">
-                    <a href="#" class="text-black">About</a>
+                <li class="nav-items__link">
+                    <a href="#">About</a>
                 </li>
-                <li class="nav-link">
-                    <a href="#" class="text-black">Inventory</a>
+                <li class="nav-items__link">
+                    <a href="#">Inventory</a>
                 </li>
-                <li class="nav-link">
-                    <a href="#" class="text-black">Contact</a>
+                <li class="nav-items__link">
+                    <a href="#">Contact</a>
                 </li>
-                <li class="nav-link">
-                    <a href="#" class="text-black">News</a>
+                <li class="nav-items__link">
+                    <a href="#">News</a>
                 </li>
             </ul>
         </div>
-        <div>Cart (0)</div>
-    <div>
-      <a href="#" class="btn btn-blue ttu header-btn">Call now</a>
-    </div>
+        <div class="nav-actions">
+          <div class="nav-items__link nav-cart">Cart (0)</div>
+          <div class="header-actions__btn">
+            <a href="#" class="btn btn-blue ttu header-btn">Call now</a>
+          </div>
+        </div>
     </nav>
   </div>
 </header>
-
-<script>
-  console.log('inside here')
-  const toggleCollapse = document.querySelector('.toggle-collapse span');
-  const nav = document.querySelector('.nav');
-
-
-  // onclick event on toggle Collapse span tag
-  toggleCollapse.onclick = (e) => {
-      nav.classList.toggle("collapse");
-      e.target.classList.toggle("toggle-click");
-  }
-</script>
